@@ -1,0 +1,33 @@
+html {
+	font-family: "Century Gothic";
+}
+
+.secret_datas {
+	display: flex;
+	flex-direction: column;
+}
+
+.secret {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.secret label {
+	margin-bottom: 5px;
+}
+
+textarea {
+	width: 300px;
+	height: 100px;
+}
+
+input[name="expireAfterViews"], input[name="expireAfter"] {
+	width: 70px;
+}
+
+input[type="submit"] {
+	margin-top: 20px;
+	width: 100px;
+	height: 40px;
+}
