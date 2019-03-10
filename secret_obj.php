@@ -56,7 +56,7 @@
 					return false;
 				}
 				
-				if ($result[4] != 0) {
+				if ($result[4] >= 0) {
 					$this->expAftViews = $result[4];
 				} else {
 					$this->db->deleteSecret($this->uniqueHash);

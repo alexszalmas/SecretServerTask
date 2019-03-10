@@ -21,6 +21,10 @@
 		private function chooseResponse() {
 			if (CONFIG_RESPONSE_TYPE == "xml") {
 				header("Content-type: application/xml");
+				
+				if ($this->createdAt == $this->expiresAt) {
+					$this->expiresAt = "Never expires.";
+				}
 
 				echo "<?xml version='1.0' encoding='UTF-8'?>";
 				echo "<Secret>";
@@ -37,6 +41,10 @@
 				echo "</Secret>";
 			} else {
 				header("Content-type: application/json");
+				
+				if ($this->createdAt == $this->expiresAt) {
+					$this->expiresAt = "Never expires.";
+				}
 
 				$jsonString =  '{
    "hash": {
